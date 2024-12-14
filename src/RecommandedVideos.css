@@ -1,0 +1,66 @@
+.recommandedVideos {
+    flex: 0.8;
+    /* border: 1px solid black; */
+    background-color: #f9f9f9;
+    padding: 30px 20px;
+    padding-bottom: 0;
+    height: calc(100vh -50px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+}
+
+.recommandedVideos h2 {
+    margin-left: 5px;
+    margin-bottom: 20px;
+
+}
+
+.recommandedVideos__videos {
+    display: flex;
+    flex-wrap: wrap;
+    /* add kiya abhi main ye */
+/* justify-content: space-between; */
+
+}
+.boxRow {
+    display: flex;
+    flex-wrap: wrap; /* Boxes wrap to the next line on small screens */
+    justify-content: center; /* Center align the boxes */
+    gap: 10px; /* Space between boxes */
+    margin-bottom: 20px; /* Space below the row */
+  }
+  
+  /* Individual boxes */
+  .box {
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: lightgray;
+    transition: 0.3s all;
+    font-weight: 600;
+    text-align: center; /* Center text inside boxes */
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+  
+  .box.active {
+    background-color: black;
+    color: white;
+  }
+  
+  /* Responsive behavior */
+  @media (max-width: 768px) {
+    .box {
+      flex: 1 1 calc(50% - 10px); /* Two boxes per row on medium screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .box {
+      flex: 1 1 calc(100% - 10px); /* Full-width boxes on small screens */
+    }
+}
+
+
